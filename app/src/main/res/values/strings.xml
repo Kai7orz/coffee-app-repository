@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">My Coffee</string>
+
+    <string name="killimanjaro_coffee">Killimanjaro Coffee</string>
+    <string name="killimanjaro_heading">キリマンジャロコーヒーは酸味が強く、後味が甘いことが特徴です</string>
+    <string name="killimanjaro_description">キリマンジャロコーヒーは酸味が強いことが特徴です</string>
+
+    <string name="americano">Americano</string>
+    <string name="americano_heading">アメリカ―のコーヒー：原産国はアメリカでバランスのいい味が特徴</string>
+    <string name="americano_description">This is Americano</string>
+
+    <string name="coffee_title"> Coffee </string>
+
+    <string name="mocha">Mocha</string>
+    <string name="mocha_heading">モカコーヒーはフルーティーな酸味とチョコレートのような香りが特徴です</string>
+    <string name="mocha_description">エチオピア原産で、独特の香りと軽い酸味が楽しめます</string>
+
+    <string name="blue_mountain">ブルーマウンテン</string>
+    <string name="blue_mountain_heading">ブルーマウンテンはバランスの取れた味と香りが特徴の高級コーヒーです</string>
+    <string name="blue_mountain_description">ジャマイカ産の高品質豆で、希少価値が高いことで知られています</string>
+
+    <string name="colombian">Colombian</string>
+    <string name="colombian_heading">コロンビア産コーヒーは香りが良く、酸味とコクのバランスが取れた味わいです</string>
+    <string name="colombian_description">ナッツのような香ばしさと滑らかな口当たりが特徴です</string>
+
+    <string name="guatemala">Guatemala</string>
+    <string name="guatemala_heading">グアテマラコーヒーはしっかりとした酸味とチョコレートのような風味が特徴です</string>
+    <string name="guatemala_description">火山地帯で育まれた豆は深いコクと香ばしさを持ちます</string>
+
+    <string name="ethiopia">Ethiopia</string>
+    <string name="ethiopia_heading">エチオピアコーヒーは花のような香りと果実の酸味が特徴です</string>
+    <string name="ethiopia_description">モカフレーバーとも呼ばれる芳醇な香りが人気です</string>
+    <string name="show_detail">show detail</string>
+
+</resources>
