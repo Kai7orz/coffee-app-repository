@@ -24,6 +24,7 @@ import com.example.mycoffee.ui.CoffeeListScreen
 import com.example.mycoffee.ui.CoffeeViewModel
 
 
+
 enum class CoffeeScreen(){
     Start,
     Detail,
@@ -60,21 +61,20 @@ fun CoffeeApp(
             composable(route = CoffeeScreen.Start.name){
                 CoffeeListScreen(
                     modifier=Modifier,
+                    onDetailButton = { },
                     coffeeList = DataSource.coffeeList,
-                    detailButton = {
-                        navController.navigate(CoffeeScreen.Detail.name)
-                    },
-                    navController = navController
+                    navController = navController,
+                    viewModel = viewModel
                 )
             }
 
             composable( route = CoffeeScreen.Detail.name){
                 CoffeeDetailScreen(
                     modifier = Modifier,
-                    coffeeName = "Killimanjaro",
                     onPrevButton = {
                         navController.navigate(CoffeeScreen.Start.name)
-                    }
+                    },
+                    viewModel = viewModel
                 )
             }
         }

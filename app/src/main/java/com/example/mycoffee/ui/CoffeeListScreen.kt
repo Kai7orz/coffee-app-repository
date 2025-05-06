@@ -31,16 +31,17 @@ import androidx.navigation.NavHostController
 import com.example.mycoffee.CoffeeScreen
 import com.example.mycoffee.data.Coffee
 import com.example.mycoffee.R
+import com.example.ui.theme.eduFamily
 
 @Composable
 fun CoffeeListScreen(
     modifier:Modifier = Modifier,
     coffeeList:List<Coffee>,
-    detailButton: ()->Unit, //coffeeNameId が渡される
-    navController: NavHostController
+    onDetailButton: (Int)->Unit, //coffeeNameId が渡される
+    navController: NavHostController,
+    viewModel: CoffeeViewModel
     ){
 
-    val viewModel: CoffeeViewModel = viewModel()
 
     LazyColumn(
         modifier=modifier
@@ -67,14 +68,21 @@ fun CoffeeListScreen(
                     Column(
                         modifier = Modifier.weight(3f)
                     ){
-                        Text(text = stringResource(it.coffeeNameId))
+                        Text(
+                            modifier = Modifier.padding(bottom=15.dp),
+                            text = stringResource(it.coffeeNameId),
+                            fontFamily = eduFamily
+                        )
                         Text(text = stringResource(it.coffeeHeadingId))
                     }
 
 
                     DetailButton(
                         modifier = Modifier.weight(1f),
-                        onClick = { navController.navigate(CoffeeScreen.Detail.name)  },
+                        onClick = {
+                                    viewModel.onDetailButton(it.coffeeStr)
+                                    navController.navigate(CoffeeScreen.Detail.name)
+                                  },
                         labelResourceId = it.coffeeNameId
                     )
 
